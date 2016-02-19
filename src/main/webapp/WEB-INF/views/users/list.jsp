@@ -13,7 +13,7 @@
 
 
 <div>
-    <h1>List users</h1>
+    <h1 class="text-primary" align="center" >List users</h1>
     <spring:url value="/users" var="showUserUrl"/>
     <spring:url value="/users" var="editUserUrl"/>
     <spring:url value="/users/remove" var="removeUserUrl"/>

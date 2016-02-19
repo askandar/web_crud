@@ -22,7 +22,7 @@
     </script>
 
     <spring:message text="Create New User" var="labelContactNew"/>
-    <spring:message text="Edit User" var="labelContactUpdate"/>
+    <spring:message text="Editing User" var="labelContactUpdate"/>
     <spring:message text="Name" var="Name"/>
     <spring:message text="Age" var="Age"/>
     <spring:message text="admin" var="admin"/>
@@ -35,7 +35,7 @@
 
 
     <div id = "userUpdate">
-            <h1>${formTitle} ${user.name}</h1>
+            <h1 class="text-primary" align="center">${formTitle} ${user.name}</h1>
             <form:form modelAttribute="user" id="userUpdateForm" method="post">
                 <form:label path="Name">
                     ${Name}

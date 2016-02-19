@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Users</title>
+    <title>Web CRUD Users</title>
 </head>
 <body>
 <c:redirect url="/users"/>
