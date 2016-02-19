@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="../../styles/jquery-ui.css">
         <script src="../../scripts/jquery-ui.min.js"></script>
 
-
+<>
     <title>Users</title>
 
 </head>
