@@ -1,5 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: askandar
@@ -13,15 +14,13 @@
 <head>
 
 
-     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-     <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css" />
-     <script type="text/javascript"
-                       src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
-     <script type="text/javascript"
-                       src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link href="<c:url value="/resources/styles/bootstrap.min.css"/>" rel="stylesheet" />
+    <script type="text/javascript" src="<c:url value="/resources/scripts/jquery.min.js"/>"></script>
+    <link rel="stylesheet" href="<c:url value="/resources/styles/jquery.dataTables.min.css"/>" />
+    <script type="text/javascript" src="<c:url value="/resources/scripts/jquery.dataTables.min.js"/>"></script>
+    <script type="text/javascript" src="<c:url value="/resources/scripts/bootstrap.min.js"/>"></script>
+    <link rel="stylesheet" href="<c:url value="/resources/styles/jquery-ui.css"/>">
+    <script src="<c:url value="/resources/scripts/jquery-ui.min.js"/>"></script>
 
 
 
@@ -43,6 +42,7 @@
     </div>
     <div>
         <tiles:insertAttribute name="footer" ignore="true"/>
+    </div>
     </div>
     </div>
 </body>

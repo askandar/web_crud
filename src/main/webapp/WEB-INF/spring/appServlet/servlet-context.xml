@@ -15,7 +15,7 @@
         http://www.springframework.org/schema/security/spring-security.xsd">
 
     <annotation-driven/>
-    <resources location="/, classpath:/META-INF/web-resources/" mapping="/resources/**"/>
+    <resources location="/, /resources/" mapping="/resources/**"/>
     <default-servlet-handler/>
 
 <!--
