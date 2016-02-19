@@ -10,7 +10,7 @@
 <div>
 
     <spring:url value="/users" var="homeUrl"/>
-
+<div></div>
     <a href="${homeUrl}">Home</a>
 </div>
 
