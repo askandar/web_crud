@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
+    <title>Users</title>
+
 </head>
 
 <body class="tundra spring">
@@ -35,6 +37,4 @@
     <div>
         <tiles:insertAttribute name="footer" ignore="true"/>
     </div>
-</div>
 </body>
-</html>

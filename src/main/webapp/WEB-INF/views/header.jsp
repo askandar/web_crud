@@ -9,8 +9,4 @@
 <div>
     <jsp:output omit-xml-declaration="yes" />
 
-<%--    <div id="appname">
-        <h1>Menu</h1>
-    </div>--%>
-
 </div>

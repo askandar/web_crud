@@ -5,24 +5,14 @@ import com.askandar.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
 
 /**
  * Created by askandar on 14.02.16.
@@ -62,7 +52,6 @@ public class UserController {
 
     @RequestMapping(value = "{id}",params = "form", method = RequestMethod.POST)
     public String update(User user, BindingResult bindingResult, Model uiModel){
-        logger.info("Updating user");
         if (bindingResult.hasErrors()){
             uiModel.addAttribute("user", user);
             return "users/update";
@@ -81,13 +70,11 @@ public class UserController {
 
     @RequestMapping(params = "form", method = RequestMethod.POST)
     public String create(User user, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest, RedirectAttributes redirectAttributes){
-        logger.info("creating user");
         if (bindingResult.hasErrors()){
             uiModel.addAttribute("user", user);
             return "users/create";
         }
         uiModel.asMap().clear();
-        logger.info("User.id: " + user.getId());
         userService.save(user);
         return "redirect:/users/";
     }

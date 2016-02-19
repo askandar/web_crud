@@ -27,7 +27,6 @@
     <spring:message text="Age" var="Age"/>
     <spring:message text="admin" var="admin"/>
     <spring:message text="createdDate" var="createdDate"/>
-
     <spring:url value="/users" var="homeUrl"/>
 
 
@@ -35,6 +34,7 @@
 
     <spring:eval expression="user.id == null ? labelContactNew:labelContactUpdate" var="formTitle"/>
     <h1>${formTitle}</h1>
+
 
     <div id = "userUpdate">
         <form:form modelAttribute="user" id="userUpdateForm" method="post">
