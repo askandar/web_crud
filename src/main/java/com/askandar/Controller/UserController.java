@@ -21,7 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/users")
 @Controller
 public class UserController {
-    private final Logger logger = LoggerFactory.getLogger(UserController.class);
+
+
     private UserService userService;
 
 

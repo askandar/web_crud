@@ -26,6 +26,9 @@
 </head>
 
 <body class="tundra spring">
+
+<div class="container">
+    <div class="span12">
     <div id="headerWrapper">
         <tiles:insertAttribute name="header" ignore="true"/>
     </div>
@@ -36,5 +39,6 @@
     </div>
     <div>
         <tiles:insertAttribute name="footer" ignore="true"/>
+    </div>
     </div>
 </body>

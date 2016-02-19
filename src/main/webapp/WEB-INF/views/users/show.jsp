@@ -8,12 +8,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <div>
     <spring:url value="/users" var="editUserUrl"/>
 
     <div id="userinfo">
-        <h1>Info about Users</h1>
-        <table  id="info" class="table table-bordered" cellspacing="10" width="40%">
+        <h1>Information about user ${user.name}</h1>
+        <table  id="info" class="table table-bordered" cellspacing="10">
             <tr>
                 <td>Name</td>
                 <td>${user.name}</td>

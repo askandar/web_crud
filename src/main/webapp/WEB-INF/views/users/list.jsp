@@ -11,6 +11,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
+
 <div>
     <h1>List users</h1>
     <spring:url value="/users" var="showUserUrl"/>
@@ -40,16 +41,39 @@
                     <td>${user.age}</td>
                     <td>${user.admin}</td>
                     <td><joda:format value="${user.createdDate}" pattern="dd-MM-yyyy"/> </td>
-                    <td><a href="${editUserUrl}/${user.id}?form">Edit</a> | <a href="${removeUserUrl}/${user.id}">Delete</a> </td>
+                    <td><a href="${editUserUrl}/${user.id}?form" class="btn btn-default">Edit</a>
+                        | <a data-href="${removeUserUrl}/${user.id}" class="btn btn-default" data-toggle="modal" data-target="#confirm-delete">Delete</a> </td>
                 </tr>
             </c:forEach>
             </tbody>
         </table>
 
+        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Confirm delete user</h3>
+                    </div>
+                    <div class="modal-body">
+                        Do you want to remove user?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-danger btn-ok">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
         <script>
             $(document).ready(function(){
                 $('#results').dataTable(
                 );
+            });
+            $('#confirm-delete').on('show.bs.modal', function(e) {
+                $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
             });
         </script>
     </c:if>
