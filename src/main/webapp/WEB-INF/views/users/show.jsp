@@ -13,7 +13,7 @@
     <spring:url value="/users" var="editUserUrl"/>
 
     <div id="userinfo">
-        <h1 class="text-primary" align="center">Information about user ${user.name}</h1>
+        <h1 class="text-primary" align="center">Information for user ${user.name}</h1>
         <table  id="info" class="table table-bordered" cellspacing="10">
             <tr>
                 <td>Name</td>
